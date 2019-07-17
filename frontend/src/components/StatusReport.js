@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { render } from "react-dom";
-import { makeData, Logo, Tips } from "./Utils";
+import { makeData} from "./Utils";
 
 import Topo from "./Topo";
 import Filter from "./Filter";
@@ -30,7 +30,7 @@ export default class StatusReport extends React.Component {
           data={data}
           columns={[
             {
-              Header: "Name",
+              Header: " ",
               columns: [
                 {
                   Header: "First Name",
@@ -44,12 +44,7 @@ export default class StatusReport extends React.Component {
                   accessor: d => d.lastName,
                   sort: true,
                   filter: textFilter()
-                }
-              ]
-            },
-            {
-              Header: "Info",
-              columns: [
+                },
                 {
                   Header: "Age",
                   accessor: "age",
@@ -61,15 +56,6 @@ export default class StatusReport extends React.Component {
                   accessor: "status",
                   sort: true,
                   filter: textFilter()
-                }
-              ]
-            },
-            {
-              Header: 'Stats',
-              columns: [
-                {
-                  Header: "Visits",
-                  accessor: "visits"
                 }
               ]
             }

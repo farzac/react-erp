@@ -1,6 +1,5 @@
 import React from "react";
 import namor from "namor";
-import "../index.css";
 
 const range = len => {
   const arr = [];
@@ -25,11 +24,11 @@ const newPerson = () => {
   };
 };
 
-export function makeData(len = 5553) {
+export function makeData(len = 2) {
   return range(len).map(d => {
     return {
       ...newPerson(),
-      children: range(10).map(newPerson)
+      children: range(2).map(newPerson)
     };
   });
 }
